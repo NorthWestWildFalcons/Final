@@ -77,6 +77,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Game1.resx">
+      <DependentUpon>Game1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game3.resx">
+      <DependentUpon>Game3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game4.resx">
       <DependentUpon>Game4.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -101,6 +108,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picback1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picback2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picback3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
