@@ -72,6 +72,7 @@ namespace Final
                 timer2.Stop();
             }
         }
+       //This region of code changes the pictures to gold images
         #region
         private void pic1_Click(object sender, EventArgs e)
         {
@@ -89,6 +90,6 @@ namespace Final
         {
             pic4.Image = Properties.Resources.picture1;
         }
-        #endregion //This changes for the cover to the gold
+        #endregion 
     }
 }
