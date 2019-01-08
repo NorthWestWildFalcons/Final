@@ -27,7 +27,20 @@ namespace Final
 
         private void lblSymbol_Click(object sender, EventArgs e)
         {
-            Label clickedLabel =
+            Label clickedLabel = sender as Label;
+
+            if (clickedLabel == null)
+                return;
+            if (clickedLabel.ForeColor == Color.Black)
+                return;
+            if(firstClick == null)
+            {
+                firstClick = clickedLabel;
+                firstClick.ForeColor = Color.Black;
+                return;
+            }
+            secondClicked = clickedLabel;
+            firstClick.ForeColor = Color.Black;
         }
 
         private void MakeSymbols()
