@@ -104,6 +104,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Game1";
             this.Text = "Game1";
+            
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyisDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
