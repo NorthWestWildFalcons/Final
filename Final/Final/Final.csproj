@@ -83,6 +83,9 @@
     <EmbeddedResource Include="Game1.resx">
       <DependentUpon>Game1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Game2.resx">
+      <DependentUpon>Game2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game3.resx">
       <DependentUpon>Game3.cs</DependentUpon>
     </EmbeddedResource>

@@ -43,6 +43,18 @@ namespace Final
             firstClick.ForeColor = Color.Black;
         }
 
+        private void Winner()
+        {
+            Label Winner;
+            for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
+            {
+                Winner = tableLayoutPanel1.Controls[i] as Label;
+                if (Winner != null && Winner.ForeColor == Winner.BackColor)
+                    return;
+            }
+            MessageBox.Show("You win");
+        }
+
         private void MakeSymbols()
         {
             Label Symbol;
