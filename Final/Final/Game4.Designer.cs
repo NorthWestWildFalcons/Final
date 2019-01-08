@@ -30,8 +30,8 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblSymbol = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,7 @@
             // lblSymbol
             // 
             this.lblSymbol.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblSymbol.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblSymbol.Location = new System.Drawing.Point(3, 0);
             this.lblSymbol.Name = "lblSymbol";
             this.lblSymbol.Size = new System.Drawing.Size(122, 112);
@@ -66,27 +67,30 @@
             this.lblSymbol.Text = "c";
             this.lblSymbol.Click += new System.EventHandler(this.lblSymbol_Click);
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label1.Location = new System.Drawing.Point(131, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 112);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "c";
-            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(131, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 112);
             this.label2.TabIndex = 2;
             this.label2.Text = "c";
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(131, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 112);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "c";
+            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(3, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 112);
