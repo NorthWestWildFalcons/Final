@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblSymbol = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblSymbol1 = new System.Windows.Forms.Label();
+            this.lblSymbol4 = new System.Windows.Forms.Label();
+            this.lblSymbol3 = new System.Windows.Forms.Label();
+            this.lblSymbol2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,10 +42,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblSymbol, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblSymbol1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblSymbol4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblSymbol3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblSymbol2, 0, 1);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(123, 110);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -56,46 +56,49 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(256, 224);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblSymbol
+            // lblSymbol1
             // 
-            this.lblSymbol.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.lblSymbol.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblSymbol.Location = new System.Drawing.Point(3, 0);
-            this.lblSymbol.Name = "lblSymbol";
-            this.lblSymbol.Size = new System.Drawing.Size(122, 112);
-            this.lblSymbol.TabIndex = 0;
-            this.lblSymbol.Text = "c";
-            this.lblSymbol.Click += new System.EventHandler(this.lblSymbol_Click);
+            this.lblSymbol1.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblSymbol1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblSymbol1.Location = new System.Drawing.Point(3, 0);
+            this.lblSymbol1.Name = "lblSymbol1";
+            this.lblSymbol1.Size = new System.Drawing.Size(122, 112);
+            this.lblSymbol1.TabIndex = 0;
+            this.lblSymbol1.Text = "c";
+            this.lblSymbol1.Click += new System.EventHandler(this.Symbol_Click);
             // 
-            // label2
+            // lblSymbol4
             // 
-            this.label2.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(131, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 112);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "c";
+            this.lblSymbol4.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblSymbol4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblSymbol4.Location = new System.Drawing.Point(131, 112);
+            this.lblSymbol4.Name = "lblSymbol4";
+            this.lblSymbol4.Size = new System.Drawing.Size(122, 112);
+            this.lblSymbol4.TabIndex = 2;
+            this.lblSymbol4.Text = "c";
+            this.lblSymbol4.Click += new System.EventHandler(this.Symbol_Click);
             // 
-            // label1
+            // lblSymbol3
             // 
-            this.label1.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(131, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 112);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "c";
+            this.lblSymbol3.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblSymbol3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblSymbol3.Location = new System.Drawing.Point(131, 0);
+            this.lblSymbol3.Name = "lblSymbol3";
+            this.lblSymbol3.Size = new System.Drawing.Size(122, 112);
+            this.lblSymbol3.TabIndex = 1;
+            this.lblSymbol3.Text = "c";
+            this.lblSymbol3.Click += new System.EventHandler(this.Symbol_Click);
             // 
-            // label3
+            // lblSymbol2
             // 
-            this.label3.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(3, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 112);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "c";
+            this.lblSymbol2.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblSymbol2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblSymbol2.Location = new System.Drawing.Point(3, 112);
+            this.lblSymbol2.Name = "lblSymbol2";
+            this.lblSymbol2.Size = new System.Drawing.Size(122, 112);
+            this.lblSymbol2.TabIndex = 3;
+            this.lblSymbol2.Text = "c";
+            this.lblSymbol2.Click += new System.EventHandler(this.Symbol_Click);
             // 
             // Game4
             // 
@@ -113,9 +116,9 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblSymbol;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSymbol1;
+        private System.Windows.Forms.Label lblSymbol4;
+        private System.Windows.Forms.Label lblSymbol3;
+        private System.Windows.Forms.Label lblSymbol2;
     }
 }
