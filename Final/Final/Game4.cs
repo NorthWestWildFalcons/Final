@@ -18,31 +18,14 @@ namespace Final
         {
             "!","!","c","c","i","i","s","s","d","d"
         };
-        Label firstClick, secondClicked;
+        Label firstClick, secondClick;
         public Game4()
         {
             InitializeComponent();
             MakeSymbols();
         }
 
-        private void lblSymbol_Click(object sender, EventArgs e)
-        {
-            Label clickedLabel = sender as Label;
-
-            if (clickedLabel == null)
-                return;
-            if (clickedLabel.ForeColor == Color.Black)
-                return;
-            if(firstClick == null)
-            {
-                firstClick = clickedLabel;
-                firstClick.ForeColor = Color.Black;
-                return;
-            }
-            secondClicked = clickedLabel;
-            firstClick.ForeColor = Color.Black;
-        }
-
+        
         private void Winner()
         {
             Label Winner;
@@ -55,12 +38,36 @@ namespace Final
             MessageBox.Show("You win");
         }
 
+        private void Symbol_Click(object sender, EventArgs e)
+        {
+            Label clickedLabel = sender as Label;
+
+            if (clickedLabel == null)
+            return;
+
+            if (clickedLabel.ForeColor == Color.Black)
+                return;
+
+            if(firstClick == null)
+            {
+                firstClick = clickedLabel;
+                firstClick.ForeColor = Color.Black;
+                return;
+            }
+            secondClick = clickedLabel;
+            secondClick.ForeColor = Color.Black;
+
+            Winner();
+
+
+        }
+
         private void MakeSymbols()
         {
             Label Symbol;
             int randomNumber;
 
-            for ( int i=0; i < tableLayoutPanel1.Controls.Count; i++)
+            for ( int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
             {
                 if (tableLayoutPanel1.Controls[i] is Label)
                     Symbol = (Label)tableLayoutPanel1.Controls[i];
