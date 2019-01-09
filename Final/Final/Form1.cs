@@ -16,5 +16,29 @@ namespace Final
         {
             InitializeComponent();
         }
+
+        private void btnGame1_Click(object sender, EventArgs e)
+        {
+            var Game1 = new Game1();
+            Game1.Show();
+        }
+
+        private void btnGame2_Click(object sender, EventArgs e)
+        {
+            var Game2 = new Game2();
+            Game2.Show();
+        }
+
+        private void btnGame3_Click(object sender, EventArgs e)
+        {
+            var Game3 = new Game3();
+            Game3.Show();
+        }
+
+        private void btnGame4_Click(object sender, EventArgs e)
+        {
+            var Game4 = new Game4();
+            Game4.Show();
+        }
     }
 }

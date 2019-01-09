@@ -12,10 +12,10 @@ namespace Final
 {
     public partial class Game3 : Form
     {
-        Random box = new Random();
-        List<Point> points = new List<Point>();
-        PictureBox PendingImage;
-        PictureBox PictureImage1;
+        Random box = new Random(); //This will randomly chose an image from the resource file
+        List<Point> points = new List<Point>(); // This helps place the image
+     /*   PictureBox PendingImage; 
+        PictureBox PictureImage1; */
 
         public Game3()
         {
@@ -24,20 +24,20 @@ namespace Final
 
         private void Game3_Load(object sender, EventArgs e)
         {
-            foreach (PictureBox picture in PictureHolder.Controls)
+            foreach (PictureBox picture in PictureHolder.Controls) //Shows the cover picture
             {
                 picture.Enabled = false;
                 points.Add(picture.Location);
             }
-            foreach (PictureBox picture in PictureHolder.Controls)
+            foreach (PictureBox picture in PictureHolder.Controls) //Does the randomizing
             {
                 int move = box.Next(points.Count);
                 Point p = points[move];
                 picture.Location = p;
                 points.Remove(p);
             }
-            timer2.Start();
-            timer1.Start();
+            timer2.Start(); //starts countdown for showing the cover photo
+            timer1.Start(); //this timer is for the cursor
             pic1.Image = Properties.Resources.picture1;
             pic2.Image = Properties.Resources.picture2;
             pic3.Image = Properties.Resources.picture3;
