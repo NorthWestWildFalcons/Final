@@ -14,16 +14,19 @@ namespace Final
     {
         Random box = new Random(); //This will randomly chose an image from the resource file
         List<Point> points = new List<Point>(); // This helps place the image
-     /*   PictureBox PendingImage; 
-        PictureBox PictureImage1; */
+       // bool repeat = false;
+        PictureBox PendingImage; 
+        PictureBox PendingImage1; 
 
         public Game3()
         {
             InitializeComponent();
+           
         }
 
         private void Game3_Load(object sender, EventArgs e)
         {
+            lblTimer.Text = "5";
             foreach (PictureBox picture in PictureHolder.Controls) //Shows the cover picture
             {
                 picture.Enabled = false;
@@ -45,9 +48,9 @@ namespace Final
             foreach (PictureBox picture in PictureHolder.Controls) 
             {
                 pic1.Image = Properties.Resources.picback; //Makes it show the picture cover
-                pic2.Image = Properties.Resources.picback1;
-                pic3.Image = Properties.Resources.picback2;
-                pic4.Image = Properties.Resources.picback3;
+                pic2.Image = Properties.Resources.picback;
+                pic3.Image = Properties.Resources.picback;
+                pic4.Image = Properties.Resources.picback;
             }
         }
 
@@ -56,6 +59,7 @@ namespace Final
             timer1.Stop();
             foreach (PictureBox picture in PictureHolder.Controls)
             {
+                picture.Enabled = true;
                 picture.Cursor = Cursors.Hand;
                 picture.Image = Properties.Resources.picback;
             }
@@ -90,6 +94,16 @@ namespace Final
         {
             pic4.Image = Properties.Resources.picture1;
         }
-        #endregion 
+        #endregion
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            timer3.Stop();
+            PendingImage.Image = Properties.Resources.picback;
+            PendingImage1.Image = Properties.Resources.picback;
+            PendingImage = null;
+            PendingImage1 = null;
+        }
     }
+
 }

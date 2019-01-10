@@ -18,12 +18,14 @@ namespace Final
         int rectangleColor = 0; // determines the color of the block
         int i; //changes the player color
         int speed = 5; // speed of the blocks
+     
         
         bool fail = false; //If player messes up overriding in the boolean
 
         public Game1()
         {
             InitializeComponent();
+            resetGame(); //invokes the reset game function
         }
 
         private void timer_Tick(object sender, EventArgs e) //play game event
@@ -56,7 +58,7 @@ namespace Final
             }
             if (player.Bounds.IntersectsWith(rectangle2.Bounds)) //when the player collides with rectangle2
             {
-                if (player.BackColor != rectangle1.BackColor) //if the color of the player and rectangle 2 are different
+                if (player.BackColor != rectangle2.BackColor) //if the color of the player and rectangle 2 are different
                 {
                     timer.Stop(); //timer stops
                     fail = true; //player lost the game
@@ -87,8 +89,22 @@ namespace Final
                 }
                 player.BackColor = colors[i]; //apply the color
             }
-
+            if(e.KeyChar == (char)Keys.R || e.KeyChar == char.ToLower((char)Keys.R) && fail)
+            {
+                resetGame();
+                fail = false;
+            }
         }
+        public void resetGame()
+        {
+            rectangle1.Top = -80;
+            rectangle2.Top = -300;
 
+            colors = new List<Color> { System.Drawing.Color.Red, System.Drawing.Color.Yellow, System.Drawing.Color.Green, System.Drawing.Color.Purple };
+            i = 0;
+            timer.Start();
+            speed = 5;
+        }   
     }
 }
+

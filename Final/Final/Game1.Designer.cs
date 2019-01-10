@@ -35,6 +35,7 @@
             this.rectangle2 = new System.Windows.Forms.PictureBox();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.lblScore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rectangle1)).BeginInit();
@@ -49,7 +50,7 @@
             this.panel1.Controls.Add(this.rectangle2);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 558);
+            this.panel1.Size = new System.Drawing.Size(481, 550);
             this.panel1.TabIndex = 0;
             // 
             // player
@@ -57,7 +58,7 @@
             this.player.BackColor = System.Drawing.Color.Yellow;
             this.player.Location = new System.Drawing.Point(191, 502);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(100, 50);
+            this.player.Size = new System.Drawing.Size(90, 40);
             this.player.TabIndex = 2;
             this.player.TabStop = false;
             // 
@@ -83,11 +84,11 @@
             // 
             this.lblInstructions.AutoSize = true;
             this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructions.Location = new System.Drawing.Point(489, 9);
+            this.lblInstructions.Location = new System.Drawing.Point(489, 488);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(258, 24);
+            this.lblInstructions.Size = new System.Drawing.Size(258, 48);
             this.lblInstructions.TabIndex = 1;
-            this.lblInstructions.Text = "Press Space to Change Color";
+            this.lblInstructions.Text = "Press Space to Change Color\r\n Press R to Reset";
             // 
             // timer
             // 
@@ -95,16 +96,26 @@
             this.timer.Interval = 20;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(572, 9);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(93, 25);
+            this.lblScore.TabIndex = 2;
+            this.lblScore.Text = "Score- 0";
+            // 
             // Game1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 554);
+            this.ClientSize = new System.Drawing.Size(758, 556);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.panel1);
             this.Name = "Game1";
             this.Text = "Game1";
-            
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyisDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
@@ -123,5 +134,6 @@
         private System.Windows.Forms.PictureBox rectangle2;
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label lblScore;
     }
 }
