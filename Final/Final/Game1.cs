@@ -80,9 +80,10 @@ namespace Final
             if (e.KeyChar == (char)Keys.Space) //when the space key is pressed
             {
                 i++; //increase the i integer by 1
+
                 if (i > colors.Count - 1) //if the i integer is greater than the amount of colours on the list
                 {
-                    i = 0;
+                    i = 0; //resets i to 0
                 }
                 player.BackColor = colors[i]; //apply the color
             }
