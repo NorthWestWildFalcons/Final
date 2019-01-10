@@ -16,7 +16,7 @@ namespace Final
 
         List<string> icons = new List<string>()
         {
-            "!","!","c","c","i","i","s","s","d","d"
+            "!","!","c","c","i","i",
         };
         Label firstClick, secondClick;
         public Game4()
@@ -26,21 +26,14 @@ namespace Final
         }
 
         
-        private void Winner()
-        {
-            Label Winner;
-            for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
-            {
-                Winner = tableLayoutPanel1.Controls[i] as Label;
-                if (Winner != null && Winner.ForeColor == Winner.BackColor)
-                    return;
-            }
-            MessageBox.Show("You win");
-        }
+       
 
         private void Symbol_Click(object sender, EventArgs e)
         {
-            Label clickedLabel = sender as Label;
+            if (firstClick != null && secondClick != null)
+                return;
+
+                Label clickedLabel = sender as Label;
 
             if (clickedLabel == null)
             return;
@@ -56,10 +49,49 @@ namespace Final
             }
             secondClick = clickedLabel;
             secondClick.ForeColor = Color.Black;
+            if (firstClick.Text == secondClick.Text)
+            {
+                firstClick = null;
+                secondClick = null;
 
-            Winner();
+                Win.Start();
+                MessageBox.Show("You win");
+            }
+             else
+            
+            Reset.Start();
+           
 
 
+        }
+
+        private void Reset_Tick(object sender, EventArgs e)
+        {
+            Reset.Stop();
+
+            firstClick.ForeColor = firstClick.BackColor;
+            secondClick.ForeColor = secondClick.BackColor;
+
+            firstClick = null;
+            secondClick = null;
+        }
+
+        private void Win_Tick(object sender, EventArgs e)
+        {
+            Win.Stop();
+
+            this.Close();
+        }
+
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            int timer = Convert.ToInt32(lblTimer.Text);
+            timer = timer - 1;
+            lblTimer.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                GameTimer.Stop();
+            }
         }
 
         private void MakeSymbols()

@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblSymbol1 = new System.Windows.Forms.Label();
             this.lblSymbol4 = new System.Windows.Forms.Label();
             this.lblSymbol3 = new System.Windows.Forms.Label();
             this.lblSymbol2 = new System.Windows.Forms.Label();
+            this.Reset = new System.Windows.Forms.Timer(this.components);
+            this.Win = new System.Windows.Forms.Timer(this.components);
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,11 +105,35 @@
             this.lblSymbol2.Text = "c";
             this.lblSymbol2.Click += new System.EventHandler(this.Symbol_Click);
             // 
+            // Reset
+            // 
+            this.Reset.Interval = 750;
+            this.Reset.Tick += new System.EventHandler(this.Reset_Tick);
+            // 
+            // Win
+            // 
+            this.Win.Interval = 750;
+            this.Win.Tick += new System.EventHandler(this.Win_Tick);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTimer.Location = new System.Drawing.Point(438, 55);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(47, 23);
+            this.lblTimer.TabIndex = 1;
+            this.lblTimer.Text = "5";
+            // 
+            // GameTimer
+            // 
+            this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
+            // 
             // Game4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 450);
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Game4";
             this.Text = "Game4";
@@ -120,5 +149,9 @@
         private System.Windows.Forms.Label lblSymbol4;
         private System.Windows.Forms.Label lblSymbol3;
         private System.Windows.Forms.Label lblSymbol2;
+        private System.Windows.Forms.Timer Reset;
+        private System.Windows.Forms.Timer Win;
+        private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Timer GameTimer;
     }
 }
