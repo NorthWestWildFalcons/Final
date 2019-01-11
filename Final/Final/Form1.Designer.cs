@@ -90,7 +90,7 @@
             this.btnGame1.Name = "btnGame1";
             this.btnGame1.Size = new System.Drawing.Size(150, 65);
             this.btnGame1.TabIndex = 1;
-            this.btnGame1.Text = "Testing Game 1";
+            this.btnGame1.Text = "> Start Game";
             this.btnGame1.UseVisualStyleBackColor = false;
             this.btnGame1.Click += new System.EventHandler(this.btnGame1_Click);
             // 
