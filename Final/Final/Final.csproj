@@ -116,18 +116,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\picture1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picture2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picture3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picback.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\picback1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +123,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\picback3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="System\" />

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Console;
 
 namespace Final
 {
@@ -17,7 +18,7 @@ namespace Final
         Random position = new Random(); // instance of the random class called position
         int rectangleColor = 0; // determines the color of the block
         int i; //changes the player color
-        int speed = 5; // speed of the blocks
+        int speed = 8; // speed of the blocks
      
         
         bool fail = false; //If player messes up overriding in the boolean
@@ -79,6 +80,7 @@ namespace Final
 
         private void KeyisDown(object sender, KeyPressEventArgs e)
         {
+
             if (e.KeyChar == (char)Keys.Space) //when the space key is pressed
             {
                 i++; //increase the i integer by 1
@@ -95,16 +97,16 @@ namespace Final
                 fail = false;
             }
         }
-        public void resetGame()
+        public void resetGame() //controls how the game starts
         {
-            rectangle1.Top = -80;
+            rectangle1.Top = -80; //resets retangles to a certain point
             rectangle2.Top = -300;
 
-            colors = new List<Color> { System.Drawing.Color.Red, System.Drawing.Color.Yellow, System.Drawing.Color.Green, System.Drawing.Color.Purple };
-            i = 0;
-            timer.Start();
-            speed = 5;
-        }   
+            colors = new List<Color> { System.Drawing.Color.Red, System.Drawing.Color.Yellow, System.Drawing.Color.Green, System.Drawing.Color.Purple }; //all of the colors
+            i = 0; // the color changer assigned 
+            timer.Start(); 
+            speed = 8;
+        }
     }
 }
 

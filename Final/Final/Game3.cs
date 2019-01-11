@@ -21,12 +21,14 @@ namespace Final
         public Game3()
         {
             InitializeComponent();
-           
+            
         }
 
         private void Game3_Load(object sender, EventArgs e)
         {
             lblTimer.Text = "5";
+            timer2.Start();
+            timer1.Start(); //this timer is for the cursor
             foreach (PictureBox picture in PictureHolder.Controls) //Shows the cover picture
             {
                 picture.Enabled = false;
@@ -39,8 +41,6 @@ namespace Final
                 picture.Location = p;
                 points.Remove(p);
             }
-            timer2.Start(); //starts countdown for showing the cover photo
-            timer1.Start(); //this timer is for the cursor
             pic1.Image = Properties.Resources.picture1;
             pic2.Image = Properties.Resources.picture2;
             pic3.Image = Properties.Resources.picture3;
@@ -104,6 +104,8 @@ namespace Final
             PendingImage = null;
             PendingImage1 = null;
         }
+
+       
     }
 
 }

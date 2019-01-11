@@ -19,7 +19,7 @@ namespace Final
         
         private void btnGame1_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
+            Random rnd = new Random(); // randomly chooses one of the 4 minigames
             int gamePicker = rnd.Next(1, 4);
 
             if (gamePicker == 1)
@@ -42,6 +42,7 @@ namespace Final
                 var Game4 = new Game4();
                 Game4.Show();
             }
+
         }
 
         private void btnGame2_Click(object sender, EventArgs e)

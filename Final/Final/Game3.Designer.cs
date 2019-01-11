@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.PictureHolder = new System.Windows.Forms.Panel();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.pic4 = new System.Windows.Forms.PictureBox();
-            this.pic3 = new System.Windows.Forms.PictureBox();
-            this.pic2 = new System.Windows.Forms.PictureBox();
-            this.pic1 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.pic4 = new System.Windows.Forms.PictureBox();
+            this.pic3 = new System.Windows.Forms.PictureBox();
+            this.pic2 = new System.Windows.Forms.PictureBox();
+            this.pic1 = new System.Windows.Forms.PictureBox();
             this.PictureHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
@@ -68,6 +68,20 @@
             this.lblTimer.Size = new System.Drawing.Size(28, 26);
             this.lblTimer.TabIndex = 1;
             this.lblTimer.Text = "5";
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // pic4
             // 
@@ -110,23 +124,13 @@
             this.pic1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pic1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic1.Image = global::Final.Properties.Resources.picback;
-            this.pic1.Location = new System.Drawing.Point(25, 26);
+            this.pic1.Location = new System.Drawing.Point(24, 26);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(123, 137);
             this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 0;
             this.pic1.TabStop = false;
             this.pic1.Click += new System.EventHandler(this.pic1_Click);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 5000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 1000;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // Game3
             // 
