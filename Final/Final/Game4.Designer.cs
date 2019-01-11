@@ -118,14 +118,16 @@
             // lblTimer
             // 
             this.lblTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.Location = new System.Drawing.Point(438, 55);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(47, 23);
+            this.lblTimer.Size = new System.Drawing.Size(29, 43);
             this.lblTimer.TabIndex = 1;
             this.lblTimer.Text = "5";
             // 
             // GameTimer
             // 
+            this.GameTimer.Interval = 1000;
             this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
             // 
             // Game4
@@ -137,6 +139,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Game4";
             this.Text = "Game4";
+            this.Load += new System.EventHandler(this.Game4_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
