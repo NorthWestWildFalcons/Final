@@ -21,6 +21,7 @@ namespace Final
         Label firstClick, secondClick;
         public Game4()
         {
+            
             InitializeComponent();
             MakeSymbols();
         }
@@ -57,8 +58,8 @@ namespace Final
                 Win.Start();
                 MessageBox.Show("You win");
             }
-             else
-            
+            else
+             
             Reset.Start();
            
 
@@ -85,13 +86,27 @@ namespace Final
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
+            
             int timer = Convert.ToInt32(lblTimer.Text);
             timer = timer - 1;
             lblTimer.Text = Convert.ToString(timer);
             if (timer == 0)
             {
+                Win.Start();// Same for win and losing
+                MessageBox.Show("You lose");
                 GameTimer.Stop();
+                this.Close();
             }
+           
+               
+
+
+
+        }
+
+        private void Game4_Load(object sender, EventArgs e)
+        {
+            GameTimer.Start();
         }
 
         private void MakeSymbols()
