@@ -5,5 +5,5 @@
 <img src="C# Final.jpg" height = "400" width ="400">
 
 
-Authors
+<h2>Authors</h2>
 
