@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class Game2 : Form
+    public partial class Score : Form
     {
-        public Game2()
+        public Score()
         {
             InitializeComponent();
         }
 
-      
+     
     }
 }

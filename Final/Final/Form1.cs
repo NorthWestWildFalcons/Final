@@ -29,7 +29,7 @@ namespace Final
             }
             else if(gamePicker == 2)
             {
-                var Game2 = new Game2();
+                var Game2 = new Score();
                 Game2.Show();
             }
             else if (gamePicker == 3)
@@ -47,7 +47,7 @@ namespace Final
 
         private void btnGame2_Click(object sender, EventArgs e)
         {
-            var Game2 = new Game2();
+            var Game2 = new Score();
             Game2.Show();
         }
 
