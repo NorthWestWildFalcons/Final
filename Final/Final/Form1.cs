@@ -27,11 +27,6 @@ namespace Final
                 var Game1 = new Game1();
                 Game1.Show();
             }
-            else if(gamePicker == 2)
-            {
-                var Game2 = new Score();
-                Game2.Show();
-            }
             else if (gamePicker == 3)
             {
                 var Game3 = new Game3();
@@ -47,8 +42,8 @@ namespace Final
 
         private void btnGame2_Click(object sender, EventArgs e)
         {
-            var Game2 = new Score();
-            Game2.Show();
+            var Score = new Score();
+            Score.Show();
         }
 
         private void btnGame3_Click(object sender, EventArgs e)
