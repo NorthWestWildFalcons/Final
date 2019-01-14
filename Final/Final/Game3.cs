@@ -81,6 +81,10 @@ namespace Final
         private void pic1_Click(object sender, EventArgs e)
         {
             pic1.Image = Properties.Resources.picture1;
+            if(PendingImage == null)
+            {
+
+            }
         }
         private void pic2_Click(object sender, EventArgs e)
         {
