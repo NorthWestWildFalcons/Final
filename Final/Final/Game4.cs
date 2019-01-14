@@ -14,7 +14,7 @@ namespace Final
     {
         Random random = new Random();
 
-        List<string> icons = new List<string>()
+        List<string> icons = new List<string>()// list of what symbols show
         {
             "!","!","c","c","i","i",
         };
@@ -81,7 +81,7 @@ namespace Final
         {
             Win.Stop();
 
-            this.Close();
+            this.Close();// change to be random
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)

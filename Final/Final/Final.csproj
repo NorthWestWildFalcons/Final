@@ -57,11 +57,11 @@
     <Compile Include="Game1.Designer.cs">
       <DependentUpon>Game1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game2.cs">
+    <Compile Include="Score.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Game2.Designer.cs">
-      <DependentUpon>Game2.cs</DependentUpon>
+    <Compile Include="Score.Designer.cs">
+      <DependentUpon>Score.cs</DependentUpon>
     </Compile>
     <Compile Include="Game3.cs">
       <SubType>Form</SubType>
@@ -83,8 +83,8 @@
     <EmbeddedResource Include="Game1.resx">
       <DependentUpon>Game1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Game2.resx">
-      <DependentUpon>Game2.cs</DependentUpon>
+    <EmbeddedResource Include="Score.resx">
+      <DependentUpon>Score.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Game3.resx">
       <DependentUpon>Game3.cs</DependentUpon>
