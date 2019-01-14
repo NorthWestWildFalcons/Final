@@ -29,28 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.lblTitle = new System.Windows.Forms.Label();
             this.btnGame2 = new System.Windows.Forms.Button();
             this.btnGame3 = new System.Windows.Forms.Button();
             this.btnGame4 = new System.Windows.Forms.Button();
             this.btnGame1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(206, 34);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(372, 70);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Rip-off Ware";
-            // 
             // btnGame2
             // 
             this.btnGame2.BackColor = System.Drawing.Color.White;
             this.btnGame2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGame2.Location = new System.Drawing.Point(309, 178);
+            this.btnGame2.Location = new System.Drawing.Point(198, 210);
             this.btnGame2.Name = "btnGame2";
             this.btnGame2.Size = new System.Drawing.Size(150, 65);
             this.btnGame2.TabIndex = 2;
@@ -62,7 +51,7 @@
             // 
             this.btnGame3.BackColor = System.Drawing.Color.White;
             this.btnGame3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGame3.Location = new System.Drawing.Point(309, 249);
+            this.btnGame3.Location = new System.Drawing.Point(26, 311);
             this.btnGame3.Name = "btnGame3";
             this.btnGame3.Size = new System.Drawing.Size(150, 65);
             this.btnGame3.TabIndex = 3;
@@ -74,7 +63,7 @@
             // 
             this.btnGame4.BackColor = System.Drawing.Color.White;
             this.btnGame4.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGame4.Location = new System.Drawing.Point(309, 320);
+            this.btnGame4.Location = new System.Drawing.Point(198, 311);
             this.btnGame4.Name = "btnGame4";
             this.btnGame4.Size = new System.Drawing.Size(150, 65);
             this.btnGame4.TabIndex = 4;
@@ -86,7 +75,7 @@
             // 
             this.btnGame1.BackColor = System.Drawing.Color.White;
             this.btnGame1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGame1.Location = new System.Drawing.Point(309, 107);
+            this.btnGame1.Location = new System.Drawing.Point(26, 210);
             this.btnGame1.Name = "btnGame1";
             this.btnGame1.Size = new System.Drawing.Size(150, 65);
             this.btnGame1.TabIndex = 1;
@@ -105,17 +94,13 @@
             this.Controls.Add(this.btnGame4);
             this.Controls.Add(this.btnGame3);
             this.Controls.Add(this.btnGame2);
-            this.Controls.Add(this.lblTitle);
             this.Name = "Form1";
             this.Text = "Main Menu";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnGame2;
         private System.Windows.Forms.Button btnGame3;
         private System.Windows.Forms.Button btnGame4;
