@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Score));
             this.label1 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -35,10 +36,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 75);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label1.Font = new System.Drawing.Font("Haettenschweiler", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label1.Location = new System.Drawing.Point(221, 220);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(312, 55);
+            this.label1.Size = new System.Drawing.Size(223, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Your Score is";
             // 
@@ -46,21 +50,22 @@
             // 
             this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(218, 174);
+            this.lblScore.Location = new System.Drawing.Point(263, 291);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(232, 88);
+            this.lblScore.Size = new System.Drawing.Size(135, 88);
             this.lblScore.TabIndex = 1;
             // 
             // Score
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
             this.Name = "Score";
-            this.Text = "Game2";
-           
+            this.Text = "Score";
             this.ResumeLayout(false);
             this.PerformLayout();
 
