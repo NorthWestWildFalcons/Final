@@ -26,9 +26,8 @@ namespace Final
 
         private void Game3_Load(object sender, EventArgs e)
         {
-            lblTimer.Text = "5";
-            timer2.Start();
-            timer1.Start(); //this timer is for the cursor
+            
+            
             foreach (PictureBox picture in PictureHolder.Controls) //Shows the cover picture
             {
                 picture.Enabled = false;
@@ -41,6 +40,8 @@ namespace Final
                 picture.Location = p;
                 points.Remove(p);
             }
+            timer2.Start();
+            timer1.Start(); //this timer is for the cursor
             pic1.Image = Properties.Resources.picture1;
             pic2.Image = Properties.Resources.picture2;
             pic3.Image = Properties.Resources.picture3;
@@ -95,7 +96,7 @@ namespace Final
                 {
                     PendingImage = null;
                     PendingImage1 = null;
-                    PendingImage.Enabled = false;
+                    pic1.Enabled = false;
                     PendingImage1.Enabled = false;
                 }
                 else
@@ -121,8 +122,8 @@ namespace Final
                 {
                     PendingImage = null;
                     PendingImage1 = null;
-                    PendingImage.Enabled = false;
-                    PendingImage1.Enabled = false;
+                    pic1.Enabled = false;
+                    pic1.Enabled = false;
                 }
                 else
                 {
@@ -148,8 +149,8 @@ namespace Final
                 {
                     PendingImage = null;
                     PendingImage1 = null;
-                    PendingImage.Enabled = false;
-                    PendingImage1.Enabled = false;
+                    pic2.Enabled = false;
+                    pic2.Enabled = false;
                 }
                 else
                 {
@@ -174,8 +175,8 @@ namespace Final
                 {
                     PendingImage = null;
                     PendingImage1 = null;
-                    PendingImage.Enabled = false;
-                    PendingImage1.Enabled = false;
+                    pic3.Enabled = false;
+                    pic3.Enabled = false;
                 }
                 else
                 {
