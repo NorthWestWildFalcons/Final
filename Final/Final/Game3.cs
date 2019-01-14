@@ -83,20 +83,105 @@ namespace Final
             pic1.Image = Properties.Resources.picture1;
             if(PendingImage == null)
             {
-
+                PendingImage = pic1;
+            }
+            else if(PendingImage != null && PendingImage1 == null)
+            {
+                PendingImage1 = pic1;
+            }
+            if (PendingImage != null && PendingImage1 != null)
+            {
+                if (PendingImage.Tag == PendingImage1.Tag)
+                {
+                    PendingImage = null;
+                    PendingImage1 = null;
+                    PendingImage.Enabled = false;
+                    PendingImage1.Enabled = false;
+                }
+                else
+                {
+                    timer3.Start();
+                }
             }
         }
         private void pic2_Click(object sender, EventArgs e)
         {
             pic2.Image = Properties.Resources.picture2;
+            if (PendingImage == null)
+            {
+                PendingImage = pic1;
+            }
+            else if (PendingImage != null && PendingImage1 == null)
+            {
+                PendingImage1 = pic1;
+            }
+            if (PendingImage != null && PendingImage1 != null)
+            {
+                if (PendingImage.Tag == PendingImage1.Tag)
+                {
+                    PendingImage = null;
+                    PendingImage1 = null;
+                    PendingImage.Enabled = false;
+                    PendingImage1.Enabled = false;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
+        
         private void pic3_Click(object sender, EventArgs e)
         {
             pic3.Image = Properties.Resources.picture3;
+            if (PendingImage == null)
+            {
+                PendingImage = pic3;
+            }
+            else if (PendingImage != null && PendingImage1 == null)
+            {
+                PendingImage1 = pic3;
+            }
+            if (PendingImage != null && PendingImage1 != null)
+            {
+                if (PendingImage.Tag == PendingImage1.Tag)
+                {
+                    PendingImage = null;
+                    PendingImage1 = null;
+                    PendingImage.Enabled = false;
+                    PendingImage1.Enabled = false;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void pic4_Click(object sender, EventArgs e)
         {
             pic4.Image = Properties.Resources.picture1;
+            if (PendingImage == null)
+            {
+                PendingImage = pic1;
+            }
+            else if (PendingImage != null && PendingImage1 == null)
+            {
+                PendingImage1 = pic1;
+            }
+            if (PendingImage != null && PendingImage1 != null)
+            {
+                if (PendingImage.Tag == PendingImage1.Tag)
+                {
+                    PendingImage = null;
+                    PendingImage1 = null;
+                    PendingImage.Enabled = false;
+                    PendingImage1.Enabled = false;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         #endregion
 
@@ -108,8 +193,6 @@ namespace Final
             PendingImage = null;
             PendingImage1 = null;
         }
-
-       
     }
 
 }

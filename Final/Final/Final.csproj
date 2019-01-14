@@ -116,15 +116,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\picback1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picback2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picback3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\picback.png" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="System\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\%24this.BackgroundImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
