@@ -40,7 +40,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label1.Font = new System.Drawing.Font("Haettenschweiler", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label1.Location = new System.Drawing.Point(221, 220);
+            this.label1.Location = new System.Drawing.Point(191, 224);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 50);
             this.label1.TabIndex = 0;
@@ -48,9 +48,10 @@
             // 
             // lblScore
             // 
+            this.lblScore.BackColor = System.Drawing.SystemColors.Control;
             this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(263, 291);
+            this.lblScore.Location = new System.Drawing.Point(215, 296);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(135, 88);
             this.lblScore.TabIndex = 1;
@@ -61,7 +62,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(701, 450);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
             this.Name = "Score";
