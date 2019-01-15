@@ -14,8 +14,10 @@ namespace Final
     {
         Random box = new Random(); //This will randomly chose an image from the resource file
         List<Point> points = new List<Point>(); // This helps place the image
-       // bool repeat = false;
-        PictureBox PendingImage; 
+
+
+        // bool repeat = false;
+        PictureBox PendingImage;
         PictureBox PendingImage1; 
 
         public Game3()
@@ -194,6 +196,11 @@ namespace Final
             PendingImage = null;
             PendingImage1 = null;
         }
+
+      //  private void pic1_Click_1(object sender, EventArgs e)
+        //{
+            
+        //}
     }
 
 }

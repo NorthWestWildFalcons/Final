@@ -43,7 +43,7 @@
             this.btnGame2.Name = "btnGame2";
             this.btnGame2.Size = new System.Drawing.Size(150, 65);
             this.btnGame2.TabIndex = 2;
-            this.btnGame2.Text = "Testing Game 2";
+            this.btnGame2.Text = ">Score";
             this.btnGame2.UseVisualStyleBackColor = false;
             this.btnGame2.Click += new System.EventHandler(this.btnGame2_Click);
             // 
