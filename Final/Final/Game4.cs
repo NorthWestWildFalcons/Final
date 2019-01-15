@@ -65,11 +65,7 @@ namespace Final
                     var Game1 = new Game1();
                     Game1.Show();
                 }
-                else if (gamePicker == 3)
-                {
-                    var Game3 = new Game3();
-                    Game3.Show();
-                }
+                
                 else
                 {
                     var Game4 = new Game4();
