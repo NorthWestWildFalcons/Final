@@ -55,6 +55,10 @@ namespace Final
                 {
                     timer.Stop(); //timer stops
                     fail = true; //player lost the game
+                    MessageBox.Show("You lose");
+                    this.Close();
+                    var Score = new Score();
+                    Score.Show();
                 }
             }
             if (player.Bounds.IntersectsWith(rectangle2.Bounds)) //when the player collides with rectangle2
@@ -63,6 +67,10 @@ namespace Final
                 {
                     timer.Stop(); //timer stops
                     fail = true; //player lost the game
+                    MessageBox.Show("You lose");
+                    this.Close();
+                    var Score = new Score();
+                    Score.Show();
                 }
             }
             /* if (score > 5)
@@ -80,7 +88,7 @@ namespace Final
 
         private void KeyisDown(object sender, KeyPressEventArgs e)
         {
-
+            countdownTimer.Start();
             if (e.KeyChar == (char)Keys.Space) //when the space key is pressed
             {
                 i++; //increase the i integer by 1
@@ -106,6 +114,38 @@ namespace Final
             i = 0; // the color changer assigned 
             timer.Start(); 
             speed = 8;
+        }
+
+        private void countdownTimer_Tick(object sender, EventArgs e)
+        {
+            int timer = Convert.ToInt32(lblTimer.Text);
+            timer = timer - 1;
+            lblTimer.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                MessageBox.Show("You Win");
+                countdownTimer.Stop();
+                this.Close();
+
+                Random rnd = new Random(); // randomly chooses one of the 4 minigames
+                int gamePicker = rnd.Next(1, 4);
+
+                if (gamePicker == 1)
+                {
+                    var Game1 = new Game1();
+                    Game1.Show();
+                }
+                else if (gamePicker == 3)
+                {
+                    var Game3 = new Game3();
+                    Game3.Show();
+                }
+                else
+                {
+                    var Game4 = new Game4();
+                    Game4.Show();
+                }
+            }
         }
     }
 }
