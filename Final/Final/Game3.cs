@@ -12,195 +12,141 @@ namespace Final
 {
     public partial class Game3 : Form
     {
-        Random box = new Random(); //This will randomly chose an image from the resource file
-        List<Point> points = new List<Point>(); // This helps place the image
+       
 
+        bool allowclick = false;
+        PictureBox firstGuess;
+        Random rnd = new Random();
+        Timer clickTimer = new Timer();
+        int time = 60;
+        Timer timer = new Timer { Interval = 1000 };
 
-        // bool repeat = false;
-        PictureBox PendingImage;
-        PictureBox PendingImage1; 
 
         public Game3()
         {
             InitializeComponent();
-            
-        }
-
-        private void Game3_Load(object sender, EventArgs e)
-        {
-            
-            
-            foreach (PictureBox picture in PictureHolder.Controls) //Shows the cover picture
-            {
-                picture.Enabled = false;
-                points.Add(picture.Location);
-            }
-            foreach (PictureBox picture in PictureHolder.Controls) //Does the randomizing
-            {
-                int move = box.Next(points.Count);
-                Point p = points[move];
-                picture.Location = p;
-                points.Remove(p);
-            }
-            timer2.Start();
-            timer1.Start(); //this timer is for the cursor
-            pic1.Image = Properties.Resources.picture1;
-            pic2.Image = Properties.Resources.picture2;
-            pic3.Image = Properties.Resources.picture3;
-            pic4.Image = Properties.Resources.picture1;
-            foreach (PictureBox picture in PictureHolder.Controls) 
-            {
-                pic1.Image = Properties.Resources.picback; //Makes it show the picture cover
-                pic2.Image = Properties.Resources.picback;
-                pic3.Image = Properties.Resources.picback;
-                pic4.Image = Properties.Resources.picback;
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            foreach (PictureBox picture in PictureHolder.Controls)
-            {
-                picture.Enabled = true;
-                picture.Cursor = Cursors.Hand;
-                picture.Image = Properties.Resources.picback;
-            }
 
         }
+        private PictureBox[] pictureBoxes
+        {
+            get { return Controls.OfType<PictureBox>().ToArray(); }
+        }
+        private static IEnumerable<Image> images
+        {
+            get
+            {
+                return new Image[]
+                {
+                    Properties.Resources.picture1,
+                    Properties.Resources.picture2,
+                    Properties.Resources.picture3
+                };
+            }
+        }
+        private void startGameTimer()
+        {
+            timer1.Start();
+            timer1.Tick += delegate
+            {
+                time--;
+                if (time < 0)
+                {
+                    timer1.Stop();
+                    MessageBox.Show("You Lose");
+                    ResetImages();
+                }
+                var ssTime = TimeSpan.FromSeconds(time);
+                lblTimer.Text = time.ToString();
+            };
+        }
+        private void ResetImages()
+        {
+            foreach (var pic in pictureBoxes)
+            {
+                pic.Tag = null;
+                pic.Visible = true;
+            }
+            HideImages();
+            setRandomImages();
+            time = 5;
+            timer.Start();
+        }
+        private void HideImages()
+        {
+            foreach (var pic in pictureBoxes)
+            {
+            pic.Image = Properties.Resources.picback;
+            }
+        }
+        private PictureBox getFreeSlot()
+        {
+            int num;
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            int timer = Convert.ToInt32(lblTimer.Text);
-            timer = timer-1;
-            lblTimer.Text = Convert.ToString(timer);
-            if (timer == 0)
+            do
             {
-                timer2.Stop();
+                num = rnd.Next(0, pictureBoxes.Count());
+            }
+            while (pictureBoxes[num].Tag != null);
+            return pictureBoxes[num];
+        }
+        private void setRandomImages()
+        {
+            foreach(var image in images)
+            {
+                getFreeSlot().Tag = image;
+                getFreeSlot().Tag = image;
             }
         }
-       //This region of code changes the pictures to gold images
-        #region
-        private void pic1_Click(object sender, EventArgs e)
+        private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
-            pic1.Image = Properties.Resources.picture1;
-            if(PendingImage == null)
-            {
-                PendingImage = pic1;
-            }
-            else if(PendingImage != null && PendingImage1 == null)
-            {
-                PendingImage1 = pic1;
-            }
-            if (PendingImage != null && PendingImage1 != null)
-            {
-                if (PendingImage.Tag == PendingImage1.Tag)
-                {
-                    PendingImage = null;
-                    PendingImage1 = null;
-                    pic1.Enabled = false;
-                    PendingImage1.Enabled = false;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-        private void pic2_Click(object sender, EventArgs e)
-        {
-            pic2.Image = Properties.Resources.picture2;
-            if (PendingImage == null)
-            {
-                PendingImage = pic1;
-            }
-            else if (PendingImage != null && PendingImage1 == null)
-            {
-                PendingImage1 = pic1;
-            }
-            if (PendingImage != null && PendingImage1 != null)
-            {
-                if (PendingImage.Tag == PendingImage1.Tag)
-                {
-                    PendingImage = null;
-                    PendingImage1 = null;
-                    pic1.Enabled = false;
-                    pic1.Enabled = false;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-        
-        private void pic3_Click(object sender, EventArgs e)
-        {
-            pic3.Image = Properties.Resources.picture3;
-            if (PendingImage == null)
-            {
-                PendingImage = pic3;
-            }
-            else if (PendingImage != null && PendingImage1 == null)
-            {
-                PendingImage1 = pic3;
-            }
-            if (PendingImage != null && PendingImage1 != null)
-            {
-                if (PendingImage.Tag == PendingImage1.Tag)
-                {
-                    PendingImage = null;
-                    PendingImage1 = null;
-                    pic2.Enabled = false;
-                    pic2.Enabled = false;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-        private void pic4_Click(object sender, EventArgs e)
-        {
-            pic4.Image = Properties.Resources.picture1;
-            if (PendingImage == null)
-            {
-                PendingImage = pic1;
-            }
-            else if (PendingImage != null && PendingImage1 == null)
-            {
-                PendingImage1 = pic1;
-            }
-            if (PendingImage != null && PendingImage1 != null)
-            {
-                if (PendingImage.Tag == PendingImage1.Tag)
-                {
-                    PendingImage = null;
-                    PendingImage1 = null;
-                    pic3.Enabled = false;
-                    pic3.Enabled = false;
-                }
-                else
-                {
-                    timer3.Start();
-                }
-            }
-        }
-        #endregion
+            HideImages();
 
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            timer3.Stop();
-            PendingImage.Image = Properties.Resources.picback;
-            PendingImage1.Image = Properties.Resources.picback;
-            PendingImage = null;
-            PendingImage1 = null;
+            allowclick = true;
+            clickTimer.Stop();
+
         }
 
-      //  private void pic1_Click_1(object sender, EventArgs e)
-        //{
-            
-        //}
+        private void clickImage(object sender, EventArgs e)
+        {
+            if (!allowclick) return;
+            var pic = (PictureBox)sender;
+            if (firstGuess == null)
+            {
+                firstGuess = pic;
+                pic.Image = (Image)pic.Tag;
+                return;
+            }
+            pic.Image = (Image)pic.Tag;
+            if (pic.Image == firstGuess.Image && pic != firstGuess)
+            {
+                pic.Visible = firstGuess.Visible = false;
+                {
+                    firstGuess = pic;
+                }
+                HideImages();
+            }
+            else
+            {
+                allowclick = false;
+                clickTimer.Start();
+            }
+            firstGuess = null;
+            if (pictureBoxes.Any(p => p.Visible)) return;
+            {
+                MessageBox.Show("You Win");
+                ResetImages();
+            }
+
+        }
+        private void startGame(object sender, EventArgs e)
+        {
+            allowclick = true;
+            setRandomImages();
+            HideImages();
+            startGameTimer();
+            clickTimer.Interval = 1000;
+            clickTimer.Tick += CLICKTIMER_TICK;
+        }
     }
 
 }
