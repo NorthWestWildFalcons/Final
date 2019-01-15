@@ -57,7 +57,29 @@ namespace Final
 
                 Win.Start();
                 MessageBox.Show("You win");
-            }
+
+                Random rnd = new Random(); // randomly chooses one of the 4 minigames
+                int gamePicker = rnd.Next(1, 4);
+
+                if (gamePicker == 1)
+                {
+                    var Game1 = new Game1();
+                    Game1.Show();
+                }
+                else if (gamePicker == 3)
+                {
+                    var Game3 = new Game3();
+                    Game3.Show();
+                }
+                else
+                {
+                    var Game4 = new Game4();
+                    Game4.Show();
+                
+
+                }
+        }
+
             else
              
             Reset.Start();
@@ -81,7 +103,7 @@ namespace Final
         {
             Win.Stop();
 
-            this.Close();// change to be random
+            this.Close();
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
@@ -96,6 +118,8 @@ namespace Final
                 MessageBox.Show("You lose");
                 GameTimer.Stop();
                 this.Close();
+                var Score = new Score();
+                Score.Show();
             }
            
                
