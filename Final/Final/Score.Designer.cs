@@ -55,6 +55,7 @@
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(135, 88);
             this.lblScore.TabIndex = 1;
+           
             // 
             // Score
             // 

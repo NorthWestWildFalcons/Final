@@ -25,11 +25,10 @@ namespace Final
             InitializeComponent();
             MakeSymbols();
         }
-
         
-       
 
-        private void Symbol_Click(object sender, EventArgs e)
+
+                private void Symbol_Click(object sender, EventArgs e)
         {
             if (firstClick != null && secondClick != null)
                 return;
@@ -108,9 +107,11 @@ namespace Final
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
-            
+            int score = 0;
+            int playerScore;
             int timer = Convert.ToInt32(lblTimer.Text);
             timer = timer - 1;
+            playerScore = score - 1;
             lblTimer.Text = Convert.ToString(timer);
             if (timer == 0)
             {
