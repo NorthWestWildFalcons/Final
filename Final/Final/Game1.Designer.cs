@@ -36,7 +36,7 @@
             this.lblInstructions = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblCountdown = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rectangle1)).BeginInit();
@@ -100,23 +100,24 @@
             // countdownTimer
             // 
             this.countdownTimer.Interval = 1000;
+            this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
             // 
-            // lblCountdown
+            // lblTimer
             // 
-            this.lblCountdown.AutoSize = true;
-            this.lblCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountdown.Location = new System.Drawing.Point(604, 13);
-            this.lblCountdown.Name = "lblCountdown";
-            this.lblCountdown.Size = new System.Drawing.Size(20, 24);
-            this.lblCountdown.TabIndex = 2;
-            this.lblCountdown.Text = "5";
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(604, 13);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(20, 24);
+            this.lblTimer.TabIndex = 2;
+            this.lblTimer.Text = "5";
             // 
             // Game1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 556);
-            this.Controls.Add(this.lblCountdown);
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.panel1);
             this.Name = "Game1";
@@ -140,6 +141,6 @@
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Timer countdownTimer;
-        private System.Windows.Forms.Label lblCountdown;
+        private System.Windows.Forms.Label lblTimer;
     }
 }
