@@ -56,6 +56,7 @@ namespace Final
                     timer.Stop(); //timer stops
                     fail = true; //player lost the game
                     MessageBox.Show("You lose");
+                    Win.Start();
                     this.Close();
                     var Score = new Score();
                     Score.Show();
@@ -68,22 +69,13 @@ namespace Final
                     timer.Stop(); //timer stops
                     fail = true; //player lost the game
                     MessageBox.Show("You lose");
+                    Win.Start();
                     this.Close();
                     var Score = new Score();
                     Score.Show();
                 }
             }
-            /* if (score > 5)
-             {
-             speed = 6;
-             }
-             if (score > 10)
-             {
-             speed = 10;
-             }
-             rectangle1.Refresh;
-             retangle2.Refresh;
-             */
+            
         }
 
         private void KeyisDown(object sender, KeyPressEventArgs e)
@@ -123,17 +115,18 @@ namespace Final
             lblTimer.Text = Convert.ToString(timer);
             if (timer == 0)
             {
+                Win.Start();
                 MessageBox.Show("You Win");
                 countdownTimer.Stop();
                 this.Close();
 
                 Random rnd = new Random(); // randomly chooses one of the 4 minigames
-                int gamePicker = rnd.Next(1, 4);
+                int gamePicker = rnd.Next(1, 2);
 
                 if (gamePicker == 1)
                 {
-                    var Game1 = new Game1();
-                    Game1.Show();
+                    var Game3 = new Game3();
+                    Game3.Show();
                 }
                
                 else
@@ -142,6 +135,12 @@ namespace Final
                     Game4.Show();
                 }
             }
+        }
+
+        private void Win_Tick(object sender, EventArgs e)
+        {
+            Win.Stop();
+            this.Close();
         }
     }
 }

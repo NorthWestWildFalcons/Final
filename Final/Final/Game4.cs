@@ -55,25 +55,29 @@ namespace Final
                 secondClick = null;
 
                 Win.Start();
-                MessageBox.Show("You win");
 
-                Random rnd = new Random(); // randomly chooses one of the 4 minigames
-                int gamePicker = rnd.Next(1, 4);
+                MessageBox.Show("You Win");
+                Random rnd = new Random(); // randomly chooses one of the 3 minigames
+                int gamePicker = rnd.Next(1, 3);
 
                 if (gamePicker == 1)
                 {
                     var Game1 = new Game1();
                     Game1.Show();
                 }
-                
+                else if (gamePicker == 2)
+                {
+                    var Game3 = new Game3();
+                }
                 else
                 {
                     var Game4 = new Game4();
                     Game4.Show();
-                
+
 
                 }
-        }
+
+            }
 
             else
              

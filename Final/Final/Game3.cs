@@ -12,19 +12,26 @@ namespace Final
 {
     public partial class Game3 : Form
     {
-       
 
+      
         bool allowclick = false;
         PictureBox firstGuess;
         Random rnd = new Random();
         Timer clickTimer = new Timer();
-        int time = 60;
+        int time = 5;
         Timer timer = new Timer { Interval = 1000 };
 
 
-        public Game3()
+        public Game3() //start game
         {
             InitializeComponent();
+            allowclick = true;
+            setRandomImages();
+            HideImages();
+            startGameTimer();
+            clickTimer.Interval = 1000;
+            clickTimer.Tick += CLICKTIMER_TICK;
+            
 
         }
         private PictureBox[] pictureBoxes
@@ -37,25 +44,33 @@ namespace Final
             {
                 return new Image[]
                 {
-                    Properties.Resources.picture1,
+                    
                     Properties.Resources.picture2,
-                    Properties.Resources.picture3
+                    Properties.Resources.picture3,
+                    
                 };
             }
         }
         private void startGameTimer()
         {
-            timer1.Start();
-            timer1.Tick += delegate
+           
+            timer.Start();
+            timer.Tick += delegate
+
             {
-                time--;
+                time = time - 1;
                 if (time < 0)
                 {
-                    timer1.Stop();
-                    MessageBox.Show("You Lose");
-                    ResetImages();
+                    timer.Stop();
+                    Win.Start();
+                    MessageBox.Show("You lose");
+                    this.Close();
+                    var Score = new Score();
+                    Score.Show();
+
                 }
-                var ssTime = TimeSpan.FromSeconds(time);
+               
+                
                 lblTimer.Text = time.ToString();
             };
         }
@@ -133,19 +148,35 @@ namespace Final
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             {
+                timer.Stop();
+                Win.Start();
                 MessageBox.Show("You Win");
-                ResetImages();
+                Random rnd = new Random(); // randomly chooses one of the 2 minigames
+                int gamePicker = rnd.Next(1, 3);
+
+                if (gamePicker == 1)
+                {
+                    var Game1 = new Game1();
+                    Game1.Show();
+                }
+                
+                else
+                {
+                    var Game4 = new Game4();
+                    Game4.Show();
+
+
+                }
             }
 
+
+
         }
-        private void startGame(object sender, EventArgs e)
+
+        private void Win_Tick(object sender, EventArgs e)
         {
-            allowclick = true;
-            setRandomImages();
-            HideImages();
-            startGameTimer();
-            clickTimer.Interval = 1000;
-            clickTimer.Tick += CLICKTIMER_TICK;
+            Win.Stop();
+            this.Close();
         }
     }
 
