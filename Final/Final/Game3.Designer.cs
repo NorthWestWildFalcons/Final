@@ -29,136 +29,100 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.pic1 = new System.Windows.Forms.PictureBox();
-            this.pic2 = new System.Windows.Forms.PictureBox();
-            this.pic3 = new System.Windows.Forms.PictureBox();
-            this.pic4 = new System.Windows.Forms.PictureBox();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.PictureHolder = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
-            this.PictureHolder.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Win = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 5000;
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 300;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // pic1
-            // 
-            this.pic1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pic1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic1.Location = new System.Drawing.Point(24, 26);
-            this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(123, 137);
-            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic1.TabIndex = 0;
-            this.pic1.TabStop = false;
-           
-            // 
-            // pic2
-            // 
-            this.pic2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pic2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic2.Location = new System.Drawing.Point(207, 26);
-            this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(123, 137);
-            this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic2.TabIndex = 1;
-            this.pic2.TabStop = false;
-            
-            // 
-            // pic3
-            // 
-            this.pic3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pic3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic3.Location = new System.Drawing.Point(24, 196);
-            this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(123, 137);
-            this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic3.TabIndex = 2;
-            this.pic3.TabStop = false;
-            
-            // 
-            // pic4
-            // 
-            this.pic4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic4.Location = new System.Drawing.Point(207, 196);
-            this.pic4.Name = "pic4";
-            this.pic4.Size = new System.Drawing.Size(123, 137);
-            this.pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic4.TabIndex = 3;
-            this.pic4.TabStop = false;
-            
             // 
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Ravie", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(162, 307);
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(161, 165);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(28, 26);
+            this.lblTimer.Size = new System.Drawing.Size(20, 24);
             this.lblTimer.TabIndex = 1;
             this.lblTimer.Text = "5";
             // 
-            // PictureHolder
+            // pictureBox1
             // 
-            this.PictureHolder.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PictureHolder.Controls.Add(this.lblTimer);
-            this.PictureHolder.Controls.Add(this.pic4);
-            this.PictureHolder.Controls.Add(this.pic3);
-            this.PictureHolder.Controls.Add(this.pic2);
-            this.PictureHolder.Controls.Add(this.pic1);
-            this.PictureHolder.Location = new System.Drawing.Point(46, 22);
-            this.PictureHolder.Name = "PictureHolder";
-            this.PictureHolder.Size = new System.Drawing.Size(360, 365);
-            this.PictureHolder.TabIndex = 0;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.clickImage);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(194, 61);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.clickImage);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(56, 197);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.clickImage);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(194, 197);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.clickImage);
+            // 
+            // Win
+            // 
+            this.Win.Interval = 750;
+            this.Win.Tick += new System.EventHandler(this.Win_Tick);
             // 
             // Game3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 555);
-            this.Controls.Add(this.PictureHolder);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblTimer);
             this.Name = "Game3";
             this.Text = "Game3";
-            this.Load += new System.EventHandler(this.Game3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
-            this.PictureHolder.ResumeLayout(false);
-            this.PictureHolder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Timer timer4;
-        private System.Windows.Forms.PictureBox pic1;
-        private System.Windows.Forms.PictureBox pic2;
-        private System.Windows.Forms.PictureBox pic3;
-        private System.Windows.Forms.PictureBox pic4;
         private System.Windows.Forms.Label lblTimer;
-        private System.Windows.Forms.Panel PictureHolder;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Timer Win;
     }
 }

@@ -37,6 +37,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
+            this.Win = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rectangle1)).BeginInit();
@@ -87,9 +88,9 @@
             this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstructions.Location = new System.Drawing.Point(489, 488);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(258, 48);
+            this.lblInstructions.Size = new System.Drawing.Size(258, 24);
             this.lblInstructions.TabIndex = 1;
-            this.lblInstructions.Text = "Press Space to Change Color\r\n Press R to Reset";
+            this.lblInstructions.Text = "Press Space to Change Color\r\n";
             // 
             // timer
             // 
@@ -111,6 +112,11 @@
             this.lblTimer.Size = new System.Drawing.Size(20, 24);
             this.lblTimer.TabIndex = 2;
             this.lblTimer.Text = "5";
+            // 
+            // Win
+            // 
+            this.Win.Interval = 750;
+            this.Win.Tick += new System.EventHandler(this.Win_Tick);
             // 
             // Game1
             // 
@@ -142,5 +148,6 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Timer countdownTimer;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Timer Win;
     }
 }
