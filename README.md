@@ -7,8 +7,8 @@ Its a game where you play different mini games that test your reaction time.Your
 Mouse and and Spacebar
 
 <h2> How To Download/install</h2> 
-The latest version of this program is <a
-href="https://github.com/NorthWestWildFalcons/Final/blob/master/Final/Final/Final.csproj"version 1.01</a><br>
+The latest version of this program is 
+
 <h2> Video </h2>
 https://youtu.be/9jnvz_6bi0M
 <h2>Our FlowChart</h2>
