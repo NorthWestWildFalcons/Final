@@ -7,7 +7,7 @@ Its a game where you play different mini games that test your reaction time.Your
 Mouse and and Spacebar
 
 <h2> How To Download/install</h2> 
-https://github.com/NorthWestWildFalcons/Final/releases/tag/V1.0
+https://github.com/NorthWestWildFalcons/Final/releases/tag/V2.0
 
 <h2> Video </h2>
 https://youtu.be/9jnvz_6bi0M
