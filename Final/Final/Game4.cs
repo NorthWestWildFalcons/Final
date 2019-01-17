@@ -55,9 +55,9 @@ namespace Final
                 secondClick = null;
 
                 Win.Start();
-
                 MessageBox.Show("You Win");
-                Random rnd = new Random(); // randomly chooses one of the 3 minigames
+
+                Random rnd = new Random(); // randomly chooses a minigame
                 int gamePicker = rnd.Next(1, 3);
 
                 if (gamePicker == 1)
@@ -65,17 +65,12 @@ namespace Final
                     var Game1 = new Game1();
                     Game1.Show();
                 }
-                else if (gamePicker == 2)
+                else  
                 {
                     var Game3 = new Game3();
+                    Game3.Show();
                 }
-                else
-                {
-                    var Game4 = new Game4();
-                    Game4.Show();
-
-
-                }
+                
 
             }
 

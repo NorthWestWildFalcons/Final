@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnGame2 = new System.Windows.Forms.Button();
-            this.btnGame3 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnGame1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -38,7 +37,7 @@
             // btnGame2
             // 
             this.btnGame2.BackColor = System.Drawing.Color.White;
-            this.btnGame2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGame2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGame2.Location = new System.Drawing.Point(198, 210);
             this.btnGame2.Name = "btnGame2";
             this.btnGame2.Size = new System.Drawing.Size(150, 65);
@@ -47,22 +46,10 @@
             this.btnGame2.UseVisualStyleBackColor = false;
             this.btnGame2.Click += new System.EventHandler(this.btnGame2_Click);
             // 
-            // btnGame3
-            // 
-            this.btnGame3.BackColor = System.Drawing.Color.White;
-            this.btnGame3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGame3.Location = new System.Drawing.Point(611, 334);
-            this.btnGame3.Name = "btnGame3";
-            this.btnGame3.Size = new System.Drawing.Size(150, 65);
-            this.btnGame3.TabIndex = 3;
-            this.btnGame3.Text = "Testing Game 3";
-            this.btnGame3.UseVisualStyleBackColor = false;
-            this.btnGame3.Click += new System.EventHandler(this.btnGame3_Click);
-            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(126, 281);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(150, 65);
@@ -74,7 +61,7 @@
             // btnGame1
             // 
             this.btnGame1.BackColor = System.Drawing.Color.White;
-            this.btnGame1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGame1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGame1.Location = new System.Drawing.Point(26, 210);
             this.btnGame1.Name = "btnGame1";
             this.btnGame1.Size = new System.Drawing.Size(150, 65);
@@ -92,7 +79,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnGame1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnGame3);
             this.Controls.Add(this.btnGame2);
             this.Name = "Form1";
             this.Text = "Main Menu";
@@ -102,7 +88,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnGame2;
-        private System.Windows.Forms.Button btnGame3;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnGame1;
     }
