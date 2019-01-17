@@ -119,9 +119,9 @@ namespace Final
                 MessageBox.Show("You Win");
                 countdownTimer.Stop();
                 this.Close();
-
-                Random rnd = new Random(); // randomly chooses one of the 4 minigames
-                int gamePicker = rnd.Next(1, 2);
+                
+                Random rnd = new Random(); // randomly chooses a minigame
+                int gamePicker = rnd.Next(1, 3);
 
                 if (gamePicker == 1)
                 {
